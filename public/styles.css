@@ -1,0 +1,127 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    vertical-align: middle;
+    display: table;
+    background-color: #ccf1fff;
+}
+
+body:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(https://dannyvanderkraan.files.wordpress.com/2015/08/2015-08-11-12_25_00-code-snippet-template.png); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+#app{
+    background-color: #ccffff;
+    height: 900px;
+    width: 1100px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.labelnarrow{
+    width: 8%;
+    font-family: Arial;
+}
+#Code{
+    width: 50%;
+}
+#Name{
+    width: 13%;
+}
+/* List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff;
+    min-height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    align-items: center;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+.edit {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .edit {
+    display: block;
+}
+
+.edit:hover:after {
+    content:"Send Now!";
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Form */
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+}
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
+
+.bigheading{
+    font-family:sans-serif;
+    font-size:400%;
+    text-align:center;
+    font-style:italic;
+    margin-right: 2%;
+    margin-left: 2%;
+
+}
+.upTop {
+    background-color: #c2c2c2;
+}
+footer {
+    vertical-align: middle;
+    margin-top:50%;
+    margin-left: 45%;
+}

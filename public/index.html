@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"/>
+  <title>Code Snippet</title>
+    <div class="upTop">
+    <br>
+    <h1 class="bigheading"> Code Snippet</h1> 
+    <br>
+  </div>
+</head>
+<body>
+
+  <div id="app">
+    <br>
+    <form v-on:submit.prevent="addItem">
+      <label>Name:</label>
+      <input id="Name" type="text" v-model="Name">
+      <label>Code:</label>
+      <input id="Code" type="text" v-model="Code">
+      <label>Type:</label>
+      <select name="type" v-model="Type">
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+      </select> 
+      <button type="submit">Add</button>
+    </form>
+    <div class="controls">
+      <label>Show only:</label>
+      <select name="type" v-model="show">
+        <option value="All">All</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+      </select> 
+    </div>
+    <ul>
+     <li v-for="item in filteredItems">
+        <p>{{item.Type}}<br>Functionality: {{item.Name}}<br>Code: {{item.Code}}</p>
+        <input class="delete" type="text" v-model="Edit">
+        <button v-on:click="editItem(item)" class="edit">^ Edit Code ^</button>
+       <button v-on:click="deleteItem(item)" class="delete">X</button>
+    </li>
+  </ul>
+  <footer><a href="https://github.com/sethlam/cs260-cproj4">GitHub</a></footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
