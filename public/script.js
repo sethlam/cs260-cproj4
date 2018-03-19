@@ -36,7 +36,7 @@ var app = new Vue({
  },
 methods: {
   addItem: function() {
-    axios.post("http://localhost:3000/api/items", {
+    axios.post("http://165.227.179.123:3000/api/items", {
       Name: this.Name,
       Code: this.Code,
       Type: this.Type,
@@ -50,7 +50,7 @@ methods: {
     });
   },
   deleteItem: function(item) {
-    axios.delete("http://localhost:3000/api/items/" + item.id).then(response => {
+    axios.delete("http://165.227.179.123:3000/api/items/" + item.id).then(response => {
       this.getItems();
       return true;
     }).catch(err => {
@@ -108,7 +108,7 @@ methods: {
     });
   },
   getItems: function() {
-    axios.get("http://localhost:3000/api/items").then(response => {
+    axios.get("http://165.227.179.123:3000/api/items").then(response => {
       this.items = response.data;
       return true;
     }).catch(err => {
